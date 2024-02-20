@@ -1,6 +1,7 @@
 import UserItem from './UserItem';
 import data from './data.json';
-import Button from './ui/Button';
+import MyButton from './ui/Button';
+import { Button } from '@nextui-org/react';
 
 function App() {
     const user1 = {
@@ -22,26 +23,30 @@ function App() {
 
     return (
         <div className="App">
-            {/*<ul>*/}
-            {/*    <UserItem user={user1} />*/}
-            {/*    <UserItem user={user2} />*/}
-            {/*</ul>*/}
+            <ul>
+                <UserItem user={user1} />
+                <UserItem user={user2} />
+            </ul>
 
-            <Button
+            <MyButton
                 text={'My Text'}
                 customClass={'my-class'}
                 onPress={() => {
                     alert('Button 1');
                 }}
             />
-            <Button
+            <MyButton
                 text={'My Text 2'}
                 onPress={() => {
                     alert('Button 2');
                 }}
             />
-
-            <button onClick={() => alert(1)}>Test</button>
+            <Button color={'secondary'} size={'lg'}>
+                NextUI Button
+            </Button>
+            <Button radius={'none'} color={'secondary'} size={'sm'}>
+                NextUI Button
+            </Button>
         </div>
     );
 }
