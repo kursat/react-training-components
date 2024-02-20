@@ -1,5 +1,6 @@
 import UserItem from './UserItem';
 import data from './data.json';
+import Button from './ui/Button';
 
 function App() {
     const user1 = {
@@ -21,10 +22,26 @@ function App() {
 
     return (
         <div className="App">
-            <ul>
-                <UserItem user={user1} />
-                <UserItem user={user2} />
-            </ul>
+            {/*<ul>*/}
+            {/*    <UserItem user={user1} />*/}
+            {/*    <UserItem user={user2} />*/}
+            {/*</ul>*/}
+
+            <Button
+                text={'My Text'}
+                customClass={'my-class'}
+                onPress={() => {
+                    alert('Button 1');
+                }}
+            />
+            <Button
+                text={'My Text 2'}
+                onPress={() => {
+                    alert('Button 2');
+                }}
+            />
+
+            <button onClick={() => alert(1)}>Test</button>
         </div>
     );
 }
