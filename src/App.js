@@ -1,10 +1,13 @@
-import Button from './ui/Button';
-
 function App() {
     return (
         <div className="App">
-            <div>Test</div>
-            <Button text={'Test'} />
+            <ul className="my-list">
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+
+            <button className="my-button">Test</button>
         </div>
     );
 }
