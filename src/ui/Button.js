@@ -1,8 +1,10 @@
 import React from 'react';
-import '../custom.css';
+import style from './Button.module.css';
 
 const Button = ({ text, customClass, onPress }) => {
-    const classes = `${customClass} border-2 border-blue-800 px-2 bg-blue-600 rounded text-white`;
+    console.log('style', style);
+
+    const classes = `${style.container} ${customClass} border-2 border-blue-800 px-2 bg-blue-600 rounded text-white`;
 
     return (
         <button onClick={onPress} className={classes}>
